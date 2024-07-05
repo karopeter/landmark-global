@@ -1,0 +1,26 @@
+.link {
+  color: #DAE7F0;
+  font-size: 16px;
+  font-family: Overpass;
+}
+
+h2 {
+    color: #2d4559;
+  font-weight: 600;
+  }
+  
+  h3 {
+      color: #2d4559;   
+  }
+  
+  .osm {
+    color: #2d4559;
+  }
+  
+  .ree {
+   color: #606d78;
+  }
+  
+  strong {
+      color: #2d4559;
+  }

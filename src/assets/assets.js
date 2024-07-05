@@ -1,0 +1,19 @@
+import logo from './landmark.png';
+import video from './landmark.webm';
+import hero from './hero.png';
+import map from './map.png';
+import solutions from './solutions.jpg';
+import math from './math.jpg';
+import logo1 from './logo1.png';
+import mecuryLogo from './mecury.svg';
+
+export const assets = {
+    logo,
+    hero,
+    video,
+    map,
+    solutions,
+    math,
+    logo1,
+    mecuryLogo 
+};

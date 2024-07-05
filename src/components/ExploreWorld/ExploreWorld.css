@@ -1,0 +1,26 @@
+.explore-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.parrr {
+    color: #2E5D74;
+}
+
+.fire-text {
+    color: #2E5D74;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.space {
+    display: flex;
+    justify-content: center;
+}
+
+.img {
+    width: 80%;
+    margin-top: 40px;
+}

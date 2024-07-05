@@ -1,0 +1,45 @@
+.head-title {
+    color: #fff;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.learn-more-btn {
+    color: #49557e;
+    background-color: #fff;
+    border: 1px solid #fff;
+    padding: 0.5rem 1rem;
+    border-radius: .375rem;
+    cursor: pointer;
+    position: absolute;
+    bottom: -1rem; /* Move the button outside the border */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: background-color 0.3s ease;
+    z-index: 1; /* Ensure button is above overlay */
+    width: auto;
+    height: auto;
+  }
+
+  .learn-more-btn:hover {
+    background-color: #49557e;
+    color:#fff;
+  }
+  
+  .relative-container {
+    position: relative;
+    border: 1px solid white;
+    border-radius: .375rem;
+    padding: 6rem 1rem 3rem 1rem; /* Padding to accommodate the button overlap */
+    text-align: center; /* Center align text content */
+  }
+  
+  .overlay {
+    background: rgba(23, 67, 89, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
