@@ -13,6 +13,7 @@ import loggy from './logy.webp';
 import woman from './woman.webp';
 import follow from './follow.jpg';
 import walls from './walls.jpg';
+import shipment from './shipment.jpg';
 
 export const assets = {
     logo,
@@ -29,5 +30,6 @@ export const assets = {
     loggy,
     woman,
     follow,
-    walls
+    walls,
+    shipment
 };
