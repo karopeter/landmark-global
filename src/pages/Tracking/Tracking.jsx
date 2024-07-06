@@ -16,7 +16,6 @@ const Tracking = () => {
     backgroundImage: ` url(https://trackcdn.landmarkglobal.com/resources/images/bg.svg?v=1720101015)`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    height: '100vh',
   };
 
   const [trackingNumber, setTrackingNumber] = useState('');
@@ -38,7 +37,7 @@ const Tracking = () => {
   };
 
   return (
-    <div style={styles} className='bg-[#1d3345] '>
+    <div style={styles} className='bg-[#1d3345] md:h-[100vh]  h-full'>
       <div className='flex justify-between items-center p-4'>
         <div className='flex items-center'>
           <Link to='/'>
@@ -110,7 +109,7 @@ const Tracking = () => {
         </div>
         <div className='bg-white p-4 md:p-10 rounded-lg shadow-md w-[100%]'>
           <div className='md:flex justify-start hidden'>
-            <h1 >ABOUT LANDMARK GLOBAL</h1>
+            <h1>ABOUT LANDMARK GLOBAL</h1>
           </div>
           <div className='flex justify-center md:justify-end'>
             <Link
