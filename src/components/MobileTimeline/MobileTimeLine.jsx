@@ -1,5 +1,3 @@
-
-
 function MobileTimeLine({ data }) {
   return (
     <div className='w-10/12 md:w-7/12 lg:6/12 mx-auto relative py-20 '>
@@ -27,10 +25,10 @@ function MobileTimeLine({ data }) {
             </div>
             <div className='w-10 h-1 bg-[#2d4559] absolute -left-10 z-0 invisible'></div>
             <div className='flex-auto w-full'>
-              <h1 className='text-lg'>{item.date}</h1>
-              <h1 className='text-xl font-bold'>{item.title}</h1>
-              <h1 className='text-xl font-bold'>{item.status}</h1>
-              <h3>{item.location}</h3>
+              <p className='text-lg'>{item.status}</p>
+
+              <p className='text-[#6c757d]'>{item.location}</p>
+              <p className='text-base  text-[#6c757d]'>{item.date}</p>
             </div>
             <a
               href={item.link}
