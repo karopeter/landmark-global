@@ -10,6 +10,7 @@ import parcel from './parcel.jpg';
 import jetlag from './jetlag.png';
 import Dilli from './dilii.webp';
 import loggy from './logy.webp';
+import woman from './woman.webp';
 
 export const assets = {
     logo,
@@ -23,5 +24,6 @@ export const assets = {
     parcel,
     jetlag,
     Dilli,
-    loggy
+    loggy,
+    woman
 };

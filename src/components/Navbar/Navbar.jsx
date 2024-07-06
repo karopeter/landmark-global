@@ -96,7 +96,7 @@ const Navbar = () => {
             </div>
           )}
         </li>
-        <li><Link to="" className="menu">Approach</Link></li>
+        <li><Link to="/approach" className="menu">Approach</Link></li>
         <li><Link to="" className="menu">About Us</Link></li>
         <li><Link to="" className="menu">News & Insights</Link></li>
       </ul>

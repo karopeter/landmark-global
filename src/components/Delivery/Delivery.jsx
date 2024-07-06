@@ -21,7 +21,7 @@ const Delivery = ({imageSrc, method, features}) => {
       <img src={imageSrc} alt="Image" className="object-cover w-full h-full rounded-lg shadow-md" />
     </div>
   </div>
-  
+
   </>
   )
 }

@@ -28,7 +28,7 @@ const Header = () => {
         <Link to="/parcel-delivery">
           <LogServices title="Parcel Delivery" buttonText="Learn More" />
         </Link>
-        <Link to="/fulfilment-solutions">
+        <Link to="/approach">
           <LogServices title="Fulfilment Solutions" buttonText="Learn More" />
         </Link>
         <Link to="/trade-services">
