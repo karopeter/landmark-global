@@ -51,17 +51,17 @@ const Tracking = () => {
           </Link>
         </div>
       </div>
-      <div className='w-full md:w-[75%] mx-auto my-auto  md:mt-[120px]'>
+      <div className='w-[90%] md:w-[75%] mx-auto my-auto  md:mt-[120px]'>
         <div className='cta  bg-white p-[40px] '>
-          <div className='cta-text-box  md:w-2/3'>
+          <div className='cta-text-box   '>
             <h2 className='heading-primary text-[34px] md:text-4xl mb-4 text-[#2B353D]'>
               Tracking your Shipment
             </h2>
             <form
-              className='flex flex-col md:flex-row   '
+              className='flex flex-col items-center gap-9 md:flex-row   '
               onSubmit={handleSubmit}
             >
-              <div className='w-full relative'>
+              <div className='w-full relativex'>
                 <input
                   type='text'
                   placeholder='Search for tracking'
@@ -70,10 +70,10 @@ const Tracking = () => {
                   onChange={handleInputChange}
                 />
               </div>
-              <div className='w-[200px] flex-1'>
+              <div className='md:w-2/5 w-full'>
                 <button
                   type='submit'
-                  className='p-3 bg-red-500 text-white rounded hover:bg-red-700  '
+                  className='p-3 bg-red-500 text-white rounded hover:bg-red-700 w-full text-2xl '
                 >
                   See Tracking Status
                 </button>
@@ -89,15 +89,15 @@ const Tracking = () => {
           ></div>
         </div>
       </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-10  w-full md:w-[75%] mx-auto my-auto'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-10  w-[90%] md:w-[75%] mx-auto my-auto'>
         <div className='bg-white p-4 md:p-10 rounded-lg shadow-md w-[100%]'>
-          <div className='flex justify-start'>
+          <div className='md:flex justify-start hidden'>
             <h1>ABOUT LANDMARK GLOBAL</h1>
           </div>
-          <div className='flex justify-end'>
+          <div className='flex justify-center md:justify-end'>
             <Link
               to='/'
-              className='p-2 rounded flex items-center hover:underline hover:text-red-500'
+              className='p-2 text-xl rounded flex items-center hover:underline text-red-500 hover:text-red-500'
               onClick={handleDropdownToggle}
             >
               VISIT OUR WEBSITE
@@ -109,12 +109,12 @@ const Tracking = () => {
           </div>
         </div>
         <div className='bg-white p-4 md:p-10 rounded-lg shadow-md w-[100%]'>
-          <div className='flex justify-start'>
-            <h1>ABOUT LANDMARK GLOBAL</h1>
+          <div className='md:flex justify-start hidden'>
+            <h1 >ABOUT LANDMARK GLOBAL</h1>
           </div>
-          <div className='flex justify-end'>
+          <div className='flex justify-center md:justify-end'>
             <Link
-              className='p-2 rounded flex items-center hover:underline hover:text-red-500'
+              className='p-2 rounded text-xl flex items-center hover:underline text-red-500 hover:text-red-500'
               onClick={handleDropdownToggle}
             >
               LOGIN

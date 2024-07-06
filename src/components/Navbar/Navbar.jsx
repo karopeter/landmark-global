@@ -38,7 +38,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className='right-end '>
+      <div className='right-end'>
         <ul className='navbar-menu'>
           <li className='menu-item'>
             <Link to='' className='menu' onClick={toggleContact}>
@@ -100,21 +100,28 @@ const Navbar = () => {
       <div className='right-end'>
         <hr className='navbar-divider' />
       </div>
-      <div className=' flex justify-start items-center'>
-        <Link to='/'>
-          <img
-            src={assets.logo}
-            alt='LogoImage'
-            className='logo w-[20%] h-[20%] relative ml-10'
-          />
-        </Link>
+      <div className=' flex justify-start items-center p-10'>
+        {!isMenuOpen && (
+          <Link to='/'>
+            <img
+              src={assets.logo}
+              alt='LogoImage'
+              className='logo w-[10%] h-[10%] relative ml-10'
+            />
+          </Link>
+        )}
         <div className='navbar '>
-          <button className='menu-toggle' onClick={toggleMenu}>
+          <button className='menu-toggle ' onClick={toggleMenu}>
             <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
           </button>
+
           <ul className={`navbar-menu ${isMenuOpen ? 'open' : ''}`}>
             <li className='menu-item '>
-              <Link to='' className='menu' onClick={toggleSolutions}>
+              <Link
+                to=''
+                className='menu text-[20px]'
+                onClick={toggleSolutions}
+              >
                 Solutions{' '}
                 <FontAwesomeIcon
                   icon={faChevronDown}
@@ -122,31 +129,37 @@ const Navbar = () => {
                 />
               </Link>
               {isSolutionsOpen && (
-                <div className='dropdown'>
-                  <Link to='/parcel-delivery' className='dropdown-item'>
+                <div className='dropdown text-[20px]'>
+                  <Link
+                    to='/parcel-delivery'
+                    className='dropdown-item text-[20px]'
+                  >
                     Parcel Delivery
                   </Link>
-                  <Link to='/approach' className='dropdown-item'>
+                  <Link to='/approach' className='dropdown-item text-[20px]'>
                     Fulfillment Solutions
                   </Link>
-                  <Link to='/trade-service' className='dropdown-item'>
+                  <Link
+                    to='/trade-service'
+                    className='dropdown-item text-[20px]'
+                  >
                     Trade Services
                   </Link>
                 </div>
               )}
             </li>
             <li>
-              <Link to='/approach' className='menu'>
+              <Link to='/approach' className='menu text-[20px]'>
                 Approach
               </Link>
             </li>
             <li>
-              <Link to='' className='menu'>
+              <Link to='' className='menu text-[20px]'>
                 About Us
               </Link>
             </li>
             <li>
-              <Link to='' className='menu'>
+                <Link to='' className='menu text-[20px]'>
                 News & Insights
               </Link>
             </li>
