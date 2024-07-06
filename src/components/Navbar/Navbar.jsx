@@ -1,4 +1,3 @@
-
 import { assets } from '../../assets/assets';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,6 +7,7 @@ import {
   faTimes,
 } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
+import { useState } from 'react';
 
 const Navbar = () => {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -96,7 +96,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      
+
       <div className='right-end'>
         <hr className='navbar-divider' />
       </div>
@@ -153,36 +153,6 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-       </ul>
-    </div>
-    <div className="right-end">
-    <hr className="navbar-divider" />
-    </div>
-    <div className="navbar">
-      <Link to="/">
-        <img src={assets.logo} alt="LogoImage" className="logo" />
-      </Link>
-      <button className="menu-toggle" onClick={toggleMenu}>
-          <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
-        </button>
-      <ul  className={`navbar-menu ${isMenuOpen ? 'open' : ''}`}>
-        <li className="menu-item">
-          <Link to="" className="menu" onClick={toggleSolutions}>
-          Solutions <FontAwesomeIcon icon={faChevronDown} className={`dropdown-icon ${isSolutionsOpen ? 'open' : ''}`} />
-          </Link>
-          {isSolutionsOpen && (
-            <div className="dropdown">
-              <Link to="/parcel-delivery" className="dropdown-item">Parcel Delivery</Link>
-              <Link to="/approach" className="dropdown-item">Fulfillment Solutions</Link>
-              <Link to="" className="dropdown-item">Trade Services</Link>
-            </div>
-          )}
-        </li>
-        <li><Link to="/approach" className="menu">Approach</Link></li>
-        <li><Link to="" className="menu">About Us</Link></li>
-        <li><Link to="" className="menu">News & Insights</Link></li>
-      </ul>
-    </div>
     </>
   );
 };
