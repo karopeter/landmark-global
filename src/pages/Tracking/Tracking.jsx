@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { assets } from '../../assets/assets';
 import { Link, useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import FooterTracking from '../../components/FooterTracking/FooterTracking';
 import "./Tracking.css";
 
@@ -25,6 +27,12 @@ const Tracking = () => {
         navigate(`/tracking/${trackingNumber}`);
         e.preventDefault();
         // Redirect to tracking details page with the tracking number
+    };
+
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+     const handleDropdownToggle = () => {
+        setIsDropdownOpen(!isDropdownOpen);
     };
 
     return (
@@ -74,7 +82,14 @@ const Tracking = () => {
             <h1>ABOUT LANDMARK GLOBAL</h1>
         </div>
         <div className='flex justify-end'>
-           <Link>VISIT OUR WEBSITE</Link>
+           <Link 
+           to="/"
+            className="p-2 rounded flex items-center hover:underline hover:text-red-500"
+            onClick={handleDropdownToggle}
+            >
+             VISIT OUR WEBSITE
+             <FontAwesomeIcon icon={isDropdownOpen ? faChevronLeft : faChevronRight} className="ml-2" />
+            </Link>
         </div>
     </div>
     <div className="bg-white p-4 md:p-10 rounded-lg shadow-md" style={{ maxWidth: '100%' }}>
@@ -82,7 +97,13 @@ const Tracking = () => {
             <h1>ABOUT LANDMARK GLOBAL</h1>
         </div>
         <div className="flex justify-end">
-            <Link>LOGIN</Link>
+            <Link 
+             className="p-2 rounded flex items-center hover:underline hover:text-red-500"
+             onClick={handleDropdownToggle}
+             >
+              LOGIN
+              <FontAwesomeIcon icon={isDropdownOpen ? faChevronLeft : faChevronRight} className="ml-2" />
+              </Link>
         </div>
     </div>
 </div>

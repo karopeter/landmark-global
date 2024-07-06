@@ -1,0 +1,10 @@
+.pree {
+    background-color: #fdf2e9;
+    margin-top: 4rem;
+    padding: 1rem; /* Add padding to ensure content doesn't touch the edges */
+  }
+  
+  .min-h {
+    min-height: 100vh; /* Ensure the div takes up at least the full height of the viewport */
+  }
+  

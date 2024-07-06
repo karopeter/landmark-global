@@ -1,0 +1,37 @@
+.webpage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.left-view {
+    display: grid;
+     /* justify-content: center; */
+     padding: 10rem;
+    background-color: rgba(23, 67, 89)
+}
+
+.stats {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.seam {
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.exp {
+    color: #2d4559;
+    font-size: 15px; 
+    font-weight: 600;
+}
+
+.sect-fil {
+    background-color: #174359;
+    height: auto;
+    padding: 1.5rem;
+}

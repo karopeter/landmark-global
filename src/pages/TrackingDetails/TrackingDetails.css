@@ -1,26 +1,81 @@
 .link {
-  color: #DAE7F0;
-  font-size: 16px;
-  font-family: Overpass;
-}
-
-h2 {
-    color: #2d4559;
-  font-weight: 600;
+    color: #DAE7F0;
+    font-size: 16px;
+    font-family: Overpass;
   }
   
-  h3 {
-      color: #2d4559;   
-  }
-  
-  .osm {
-    color: #2d4559;
-  }
-  
-  .ree {
-   color: #606d78;
-  }
-  
-  strong {
+  h2 {
       color: #2d4559;
+    font-weight: 600;
+    }
+    
+    h3 {
+        color: #2d4559;   
+    }
+    
+    .osm {
+      color: #2d4559;
+    }
+    
+    .ree {
+     color: #606d78;
+    }
+    
+    strong {
+        color: #2d4559;
+    }
+  
+   
+  
+  .card {
+    background-color: #fff;
+    box-shadow: 0 1px 39px rgba(0,0,0,.1);
+    border-radius: 4px;
+    color: #2b353d;
+    padding: 1rem;
+  }
+  
+  .timeline {
+    position: relative;
+  }
+  
+  .timeline-event {
+    position: relative;
+  }
+  
+  .timeline-icon {
+    position: relative;
+    width: 32px;
+    height: 32px;
+  }
+  
+  .box {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .box.dark {
+    fill: #2d4559;
+  }
+  
+  .box.light {
+    fill: #e2e8f0;
+  }
+  
+  .exclamation {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .horizontal-line {
+    position: absolute;
+    height: 12px;
+    top: 10px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  
+  .horizontal-line.dark {
+    background-color: #2d4559;
   }

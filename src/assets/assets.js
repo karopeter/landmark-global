@@ -6,6 +6,10 @@ import solutions from './solutions.jpg';
 import math from './math.jpg';
 import logo1 from './logo1.png';
 import mecuryLogo from './mecury.svg';
+import parcel from './parcel.jpg';
+import jetlag from './jetlag.png';
+import Dilli from './dilii.webp';
+import loggy from './logy.webp';
 
 export const assets = {
     logo,
@@ -15,5 +19,9 @@ export const assets = {
     solutions,
     math,
     logo1,
-    mecuryLogo 
+    mecuryLogo,
+    parcel,
+    jetlag,
+    Dilli,
+    loggy
 };

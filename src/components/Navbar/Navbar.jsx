@@ -90,7 +90,7 @@ const Navbar = () => {
           </Link>
           {isSolutionsOpen && (
             <div className="dropdown">
-              <Link to="" className="dropdown-item">Parcel Delivery</Link>
+              <Link to="/parcel-delivery" className="dropdown-item">Parcel Delivery</Link>
               <Link to="" className="dropdown-item">Fulfillment Solutions</Link>
               <Link to="" className="dropdown-item">Trade Services</Link>
             </div>
