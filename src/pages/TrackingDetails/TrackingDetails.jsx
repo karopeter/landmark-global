@@ -5,8 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import FooterTracking from '../../components/FooterTracking/FooterTracking';
 import './TrackingDetails.css';
+import MobileTimeLine from '../../components/MobileTimeline/MobileTimeLine';
 
 const TrackingDetails = () => {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const timelineEvents = [
     {
       status: 'Data Received',
@@ -36,20 +38,30 @@ const TrackingDetails = () => {
 
   const { trackingNumber } = useParams();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
- const timelineRef = useRef(null);
-    const lineRef = useRef(null);
-     useEffect(() => {
-       if (timelineRef.current && lineRef.current) {
-         const firstEvent = timelineRef.current.firstChild;
-         const lastEvent = timelineRef.current.lastChild;
-         if (firstEvent && lastEvent) {
-           const startX = firstEvent.offsetLeft + firstEvent.offsetWidth / 100;
-           const endX = lastEvent.offsetLeft + lastEvent.offsetWidth / 2;
-           lineRef.current.style.left = `${startX}px`;
-           lineRef.current.style.width = `${endX - startX}px`;
-         }
-       }
-     }, []);
+  const timelineRef = useRef(null);
+  const lineRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  useEffect(() => {
+    if (timelineRef.current && lineRef.current) {
+      const firstEvent = timelineRef.current.firstChild;
+      const lastEvent = timelineRef.current.lastChild;
+      if (firstEvent && lastEvent) {
+        const startX = firstEvent.offsetLeft + firstEvent.offsetWidth / 2;
+        const endX = lastEvent.offsetLeft + lastEvent.offsetWidth / 2;
+        lineRef.current.style.left = `${startX}px`;
+        lineRef.current.style.width = `${endX - startX}px`;
+      }
+    }
+  }, [timelineEvents]);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const fetchTrackingDetails = (trackingNumber) => {
     const trackingDetails = {
       trackingNumber: trackingNumber,
@@ -78,7 +90,7 @@ const TrackingDetails = () => {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     minHeight: '100vh',
-    padding: '30px',
+    padding: '0px',
   };
 
   return (
@@ -139,7 +151,7 @@ const TrackingDetails = () => {
                 <p className='ree'>{trackingDetails.shippedDate}</p>
               </div>
             </div>
-            <div className='flex justify-end'>
+            <div className='flex justify-start'>
               <div className='p-4 m-2 rounded'>
                 <strong>Completed -</strong>{' '}
                 <span className='ree'>Received at return</span>
@@ -149,58 +161,63 @@ const TrackingDetails = () => {
               </div>
             </div>
           </div>
-
-          <div className='card mb-4 overflow-x-auto'>
-            <div className='timeline mt-8 flex relative'>
-              {timelineEvents.map((event, index) => (
-                <div
-                  key={index}
-                  className='timeline-event flex flex-col items-start mx-4'
-                  style={{ minWidth: '150px'  }}
-                >
-                  <div className='timeline-icon mb-4 relative z-10'>
-                    <svg
-                      className={`box ${event.completed ? 'dark' : 'light'}`}
-                      viewBox='0 0 32 32'
-                      fill='none'
-                      width='32'
-                      height='32'
-                    >
-                      <rect
-                        width='100%'
-                        height='100%'
-                        rx='6'
-                        fill={event.completed ? '#2d4559' : '#e2e8f0'}
-                      ></rect>
-                    </svg>
-                    {event.completed && (
+          {isMobile ? (
+            <MobileTimeLine data={timelineEvents} />
+          ) : (
+            <div className='card mb-4 overflow-x-auto'>
+              <div className='timeline mt-8 flex relative'>
+                {timelineEvents.map((event, index) => (
+                  <div
+                    key={index}
+                    className='timeline-event flex flex-col items-start mx-4'
+                    style={{ minWidth: '150px' }}
+                  >
+                    <div className='timeline-icon mb-4 relative z-10'>
                       <svg
-                        className='exclamation absolute top-1 left-1'
-                        viewBox='0 0 24 24'
+                        className={`box ${event.completed ? 'dark' : 'light'}`}
+                        viewBox='0 0 32 32'
                         fill='none'
-                        width='24'
-                        height='24'
+                        width='32'
+                        height='32'
                       >
-                        <path
-                          fillRule='evenodd'
-                          clipRule='evenodd'
-                          d='M9.69707 18.3959C9.7947 18.4935 9.95299 18.4935 10.0506 18.3959L20.3037 8.14282C20.4013 8.04519 20.4013 7.88689 20.3037 7.78926L18.5359 6.0215C18.4383 5.92387 18.28 5.92386 18.1823 6.0215L9.87387 14.33L5.80799 10.2641C5.71036 10.1665 5.55207 10.1665 5.45444 10.2641L3.68667 12.0319C3.58904 12.1295 3.58904 12.2878 3.68667 12.3854L7.92617 16.6249C7.9272 16.626 7.92825 16.627 7.9293 16.6281L9.69707 18.3959Z'
-                          fill='white'
-                        ></path>
+                        <rect
+                          width='100%'
+                          height='100%'
+                          rx='6'
+                          fill={event.completed ? '#2d4559' : '#e2e8f0'}
+                        ></rect>
                       </svg>
-                    )}
+                      {event.completed && (
+                        <svg
+                          className='exclamation absolute top-1 left-1'
+                          viewBox='0 0 24 24'
+                          fill='none'
+                          width='24'
+                          height='24'
+                        >
+                          <path
+                            fillRule='evenodd'
+                            clipRule='evenodd'
+                            d='M9.69707 18.3959C9.7947 18.4935 9.95299 18.4935 10.0506 18.3959L20.3037 8.14282C20.4013 8.04519 20.4013 7.88689 20.3037 7.78926L18.5359 6.0215C18.4383 5.92387 18.28 5.92386 18.1823 6.0215L9.87387 14.33L5.80799 10.2641C5.71036 10.1665 5.55207 10.1665 5.45444 10.2641L3.68667 12.0319C3.58904 12.1295 3.58904 12.2878 3.68667 12.3854L7.92617 16.6249C7.9272 16.626 7.92825 16.627 7.9293 16.6281L9.69707 18.3959Z'
+                            fill='white'
+                          ></path>
+                        </svg>
+                      )}
+                    </div>
+                    <div className='timeline-content text-start'>
+                      <p className='bold'>{event.status}</p>
+                      <p className='light gray'>{event.location}</p>
+                      <p className='time light gray'>{event.date}</p>
+                    </div>
                   </div>
-                  <div className='timeline-content text-start'>
-                    <p className='bold'>{event.status}</p>
-                    <p className='light gray'>{event.location}</p>
-                    <p className='time light gray'>{event.date}</p>
-                  </div>
-                </div>
-              ))}
-              <div className='horizontal-line dark absolute top-4 left-[20px] right-[75px] h-3 bg-[#2d4559] z-0 w-[49%] '></div>
+                ))}
+                <div
+                  className='horizontal-line dark absolute top-4 left-0 h-3 bg-[#2d4559] z-0 lg:w-1/2'
+                  ref={lineRef}
+                ></div>
+              </div>
             </div>
-          </div>
-
+          )}
           <div className='flex justify-center mt-4'>
             <Link
               className='ree p-2 rounded flex items-center hover:underline'
@@ -214,7 +231,7 @@ const TrackingDetails = () => {
               />
             </Link>
           </div>
-          {isDropdownOpen && (
+          {isDropdownOpen && !isMobile && (
             <div className='mt-4 bg-white rounded shadow-md overflow-auto'>
               <table className='min-w-full bg-white'>
                 <thead>
