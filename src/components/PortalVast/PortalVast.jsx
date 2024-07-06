@@ -22,18 +22,18 @@ const PortalVast = ({features, dropoff, end, options, intelligence, expert, duty
        <div className='webpage'>
          <div className='left-view'>
             <div>
-                <h1 className="stats">Return Services</h1>
-                <p className='seam'>
+                <h1  className='text-3xl md:text-xl text-start font-bold lg:text-4xl md:text-left text-[#fff]'>Return Services</h1>
+                <p className='text-lg leading-[34px] md:text-[20px] font-normal text-start lg:leading-relaxed mt-4  md:text-left text-[#fff]'>
                 Seamless in-country solutions that are easy
-                 <br /> 
+                
                 to implement and cost-effective. We leverage our 
-                <br />
+                
                 online returns portal in Mercury with our vast 
-                <br />
+                
                 worldwide postal network to get returns back to you safely, handling everything from the labeling 
-                <br />
+                
                 to inbound clearance and transportation back to 
-                <br />
+                
                 your facility.  
                 </p>
             </div>
@@ -42,11 +42,11 @@ const PortalVast = ({features, dropoff, end, options, intelligence, expert, duty
        </div>
 
        <div className='p-20'>
-    <h2 className="pal mb-4 mt-4 text-lg md:text-xl lg:text-2xl text-center md:text-left">{features}</h2>
+    <h2 className='mb-8 mt-5 md:mb-10 md:mt-10 text-[20px] text-start font-bold lg:text-2xl md:text-left text-[#2E5D74]'>{features}</h2>
     <div className='flex flex-col md:flex-row md:justify-between'>
     <div className="bg-white m-2 flex-1">
         <FontAwesomeIcon icon={faCheckCircle} style={{ color: 'rgb(239, 38, 55)'}} className="mr-2" />
-        <p className="exp inline-block">{dropoff}</p>
+        <p className='text-lg leading-[34px] md:text-[20px] font-normal text-start lg:leading-relaxed  md:text-left text-[#2E5D74] inline-block'>{dropoff}</p>
        </div>
        <div className="bg-white m-2 flex-1">
         <FontAwesomeIcon icon={faCheckCircle} style={{ color: 'rgb(239, 38, 55)'}} className="mr-2" />
@@ -94,21 +94,10 @@ const PortalVast = ({features, dropoff, end, options, intelligence, expert, duty
        </div>
     </div>
  </div>
-   <section className='sect-fil'>
-   <h2 className="text-center mt-8 text-white heading">Fulfillment Solutions</h2>
-   <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-  <div className="col-span-1 md:col-span-1">
-    <Link to="/fulfilment-solutions">
-      <LogServices title="Fulfilment Solutions" buttonText="Learn More" />
-    </Link>
-  </div>
-  <div className="col-span-1 md:col-span-1">
-    <Link to="/trade-services">
-      <LogServices title="Trade Services" buttonText="Learn More" />
-    </Link>
-  </div>
-</div>
-
+   <section className=' bg-[#174359] pb-16 pt-10 lg:pt-16 lg:pb-28'>
+    <div className=''>
+      <LogServices />
+    </div>
    </section>
    <Growth />
 </div>

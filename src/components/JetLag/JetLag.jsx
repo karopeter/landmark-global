@@ -27,11 +27,13 @@ const JetLag = ({imageSrc, method, leading, features, dropoff, end, options, int
     <>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-4 md:p-20">
     <div className="col-span-1 md:col-span-1">
-    <h1 className="pal mb-4 mt-4 text-lg md:text-xl lg:text-2xl text-center md:text-left">{method}</h1>
-      <p className="lee text-sm md:text-base leading-relaxed mt-4 text-center md:text-left">
+    <h2 className='mb-8 mt-5 md:mb-10 md:mt-10 text-3xl md:text-xl text-start font-bold lg:text-4xl md:text-left text-[#2E5D74]'>
+          {method}
+        </h2>
+      <p className='text-lg leading-[34px] md:text-[20px] font-normal text-start lg:leading-relaxed mt-4  md:text-left text-[#2E5D74]'>
       Using both air and ground transportations options, we connect you seamlessly to our worldwide delivery network of 220 destinations while maintaining a constant focus on improving our services to the top ecommerce destinations around the world.
       </p>
-      <p className="lee text-sm md:text-base leading-relaxed mt-4 text-center md:text-left">
+      <p className='text-lg leading-[34px] md:text-[20px] font-normal text-start lg:leading-relaxed mt-4  md:text-left text-[#2E5D74]'>
       Powered by our proprietary technology, Mercury, we dynamically route parcels into our highly intelligent final mile network giving you full visibility of your packages along the way.
       </p>
     </div>
@@ -40,8 +42,8 @@ const JetLag = ({imageSrc, method, leading, features, dropoff, end, options, int
     </div>
   </div>
   <div className="ml-20">
-     <h2 className="pal mb-4 mt-4 text-lg md:text-xl lg:text-2xl text-center md:text-left">{leading}</h2>
-     <p className="lee text-sm md:text-base leading-relaxed mt-4 text-center md:text-left">
+     <h2 className='mb-8 mt-5 md:mb-10 md:mt-10 text-3xl md:text-xl text-start font-bold lg:text-3xl md:text-left text-[#2E5D74]'>{leading}</h2>
+     <p className='text-lg leading-[34px] md:text-[18px] font-normal text-start lg:leading-relaxed mt-4  md:text-left text-[#2E5D74]'>
      In Canada, our largest in-house network, your packages will be within Landmark's control throughout 
      <br />
      the entire delivery experience. We transport goods across the border on Landmark owned trucks into 
@@ -52,38 +54,38 @@ const JetLag = ({imageSrc, method, leading, features, dropoff, end, options, int
      </p>
   </div>
   <div className='p-20'>
-    <h2 className="pal mb-4 mt-4 text-lg md:text-xl lg:text-2xl text-center md:text-left">{features}</h2>
+    <h2 className='mb-8 mt-5 md:mb-10 md:mt-10 text-[20px] text-start font-bold lg:text-2xl md:text-left text-[#2E5D74]'>{features}</h2>
     <div className='flex flex-col md:flex-row md:justify-between'>
     <div className="bg-white m-2 flex-1">
         <FontAwesomeIcon icon={faCheckCircle} style={{ color: 'rgb(239, 38, 55)'}} className="mr-2" />
-        <p className="exp inline-block">{dropoff}</p>
+        <p className="className='text-lg leading-[34px] md:text-[20px] font-normal text-start lg:leading-relaxed  md:text-left text-[#2E5D74] inline-block">{dropoff}</p>
        </div>
        <div className="bg-white m-2 flex-1">
         <FontAwesomeIcon icon={faCheckCircle} style={{ color: 'rgb(239, 38, 55)'}} className="mr-2" />
-        <p className="exp inline-block">{end}</p>
+        <p className="className='text-lg leading-[34px] md:text-[20px] font-normal text-start lg:leading-relaxed  md:text-left text-[#2E5D74] inline-block">{end}</p>
        </div>
        <div className="bg-white m-2 flex-1">
         <FontAwesomeIcon icon={faCheckCircle} style={{ color: 'rgb(239, 38, 55)'}} className="mr-2" />
-        <p className="exp inline-block">{options}</p>
+        <p className='text-lg leading-[34px] md:text-[20px] font-normal text-start lg:leading-relaxed  md:text-left text-[#2E5D74] inline-block'>{options}</p>
        </div>
     </div>
     <div className='flex flex-col md:flex-row md:justify-between'>
     <div className="bg-white m-2 flex-1">
         <FontAwesomeIcon icon={faCheckCircle} style={{ color: 'rgb(239, 38, 55)'}} className="mr-2" />
-        <p className="exp inline-block">{intelligence}</p>
+        <p className='text-lg leading-[34px] md:text-[20px] font-normal text-start lg:leading-relaxed  md:text-left text-[#2E5D74] inline-block'>{intelligence}</p>
        </div>
        <div className="bg-white m-2 flex-1">
         <FontAwesomeIcon icon={faCheckCircle} style={{ color: 'rgb(239, 38, 55)'}} className="mr-2" />
-        <p className="exp inline-block">{expert}</p>
+        <p className='text-lg leading-[34px] md:text-[20px] font-normal text-start lg:leading-relaxed  md:text-left text-[#2E5D74] inline-block'>{expert}</p>
        </div>
        <div className="bg-white m-2 flex-1">
         <FontAwesomeIcon icon={faCheckCircle} style={{ color: 'rgb(239, 38, 55)'}} className="mr-2" />
-        <p className="exp inline-block">{duty}</p>
+        <p className='text-lg leading-[34px] md:text-[20px] font-normal text-start lg:leading-relaxed  md:text-left text-[#2E5D74] inline-block'>{duty}</p>
        </div>
     </div>
 </div>
 <div className="ml-20">
-  <h2 className="pal mb-4 mt-4 text-lg md:text-xl lg:text-2xl text-center md:text-left">{services}</h2>
+  <h2 className='mb-8 mt-5 md:mb-10 md:mt-10 text-[20px] text-start font-bold lg:text-2xl md:text-left text-[#2E5D74]'>{services}</h2>
   <div className="mt-4 back rounded overflow-auto">
     <div className="flex flex-col md:flex-row md:justify-start gap-20">
         <div>

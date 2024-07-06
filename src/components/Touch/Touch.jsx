@@ -8,8 +8,10 @@ const Touch = ({ method }) => {
     <div className="p-4 md:p-10 lg:p-20">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div className="col-span-1 mt-4 md:mt-10">
-          <h1 className="mb-4 mt-4 text-xl md:text-2xl lg:text-3xl font-bold text-center md:text-left">{method}</h1>
-          <p className="pal text-base md:text-lg leading-relaxed mt-4 text-center md:text-left">
+        <h2 className=' text-3xl md:text-xl text-start font-bold lg:text-4xl md:text-left text-[#2E5D74]'>
+          {method}
+        </h2>
+          <p className="text-[#2E5D74] text[18px] text-base md:text-lg leading-relaxed mt-4 text-center md:text-left">
             Everything we do is built around our clients’ 
             <br />
             needs. Our aim is to provide an unparalleled 
@@ -27,8 +29,8 @@ const Touch = ({ method }) => {
           <div className="flex justify-center md:justify-start mb-4">
             <FontAwesomeIcon icon={faUsers} style={{ color: 'rgb(239, 38, 55)', fontSize: '2rem' }} />
           </div>
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-center md:text-left">Specialized onboarding team</h2>
-          <p className="pal text-base md:text-lg leading-relaxed mt-4 text-center md:text-left">
+          <h2 className='text-3xl md:text-xl text-start font-bold lg:text-4xl md:text-left text-[#2E5D74]'>Specialized onboarding team</h2>
+          <p className="text-[#2E5D74] text-[18px] text-base md:text-lg leading-relaxed mt-4 text-center md:text-left">
             A team of multi-disciplinary experts making 
             <br />
             the integration process as smooth as possible 
@@ -40,8 +42,8 @@ const Touch = ({ method }) => {
           <div className="flex justify-center md:justify-start mb-4">
             <FontAwesomeIcon icon={faHandshake} style={{ color: 'rgb(239, 38, 55)', fontSize: '2rem' }} />
           </div>
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-center md:text-left">Dedicated customer support</h2>
-          <p className="pal text-base md:text-lg leading-relaxed mt-4 text-center md:text-left">
+          <h2 className='text-3xl md:text-xl text-start font-bold lg:text-4xl md:text-left text-[#2E5D74]'>Dedicated customer support</h2>
+          <p className="text-[#2E5D74] text-[18px] text-base md:text-lg leading-relaxed mt-4 text-center md:text-left">
             Our client support team works closely with
             <br />
             you to answer all your questions and

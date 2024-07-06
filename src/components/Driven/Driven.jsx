@@ -16,10 +16,10 @@ const Driven = () => {
   return (
     <div>
       <div className="p-20">
-        <h2 className="pal mb-4 mt-4 text-lg md:text-xl lg:text-2xl text-center md:text-left">Driven by Technology</h2>
+        <h2  className='mb-8 mt-5 md:mb-10 md:mt-10 text-3xl md:text-xl text-start font-bold lg:text-4xl md:text-left text-[#2E5D74]'>Driven by Technology</h2>
         <div className='flex flex-col md:flex-row md:justify-between'>
           <div className="w-full md:w-1/4 p-2">
-            <p className='pal'>
+            <p className='text-lg leading-[34px] md:text-[18px] font-normal text-start lg:leading-relaxed mt-4  md:text-left text-[#2E5D74]'>
               Our proprietary system, Mercury, brings 
               <br />
               together tracking, reporting and accounting 
@@ -36,7 +36,7 @@ const Driven = () => {
           </div>
           <div className="w-full md:w-1/4 p-2">
             <FontAwesomeIcon icon={faNetworkWired} style={{ color: 'rgb(239, 38, 55)', fontSize: '2rem'}} className="mb-2" />
-            <p className='pal'>
+            <p  className='text-lg leading-[34px] md:text-[18px] font-normal text-start lg:leading-relaxed mt-4  md:text-left text-[#2E5D74]'>
               Integrates with all major
               <br />
               platforms via web, API or 
@@ -46,7 +46,7 @@ const Driven = () => {
           </div>
           <div className="w-full md:w-1/4 p-2">
             <FontAwesomeIcon icon={faGlobe} style={{ color: 'rgb(239, 38, 55)', fontSize: '2rem'}} className="mb-2" />
-            <p  className='pal'>
+            <p   className='text-lg leading-[34px] md:text-[18px] font-normal text-start lg:leading-relaxed mt-4  md:text-left text-[#2E5D74]'>
               Enables all Landmark
               <br />
               Global's services worldwide
@@ -54,7 +54,7 @@ const Driven = () => {
           </div>
           <div className="">
             <FontAwesomeIcon icon={faUser} style={{ color: 'rgb(239, 38, 55)', fontSize: '2rem'}} className="mb-2" />
-            <p className='pal'>Easy to navigate</p>
+            <p  className='text-lg leading-[34px] md:text-[18px] font-normal text-start lg:leading-relaxed mt-4  md:text-left text-[#2E5D74]'>Easy to navigate</p>
           </div>
         </div>
       </div>

@@ -70,3 +70,28 @@ body, html {
   border-color: #ffffff;
   background-color: #ffffff;
 }
+
+.d-button {
+    background: transparent;
+    border: 1px solid rgba(23, 67, 89);
+    color: #2d4559;
+    border-radius: 10px;
+    padding: 0.65rem 1.5rem;
+}
+
+.d-button:hover {
+    background-color: #2d4559;
+    color: #fff;
+}
+
+.p-button {
+    background: #2d4559;
+    color: rgba(255, 255, 255);
+    border-radius: 10px;
+    padding: 0.65rem 1.5rem;
+}
+
+.p-button:hover {
+    background-color: rgba(23, 67, 89);
+    color: rgba(255, 255, 255)
+}
