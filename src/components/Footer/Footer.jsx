@@ -27,7 +27,7 @@ const Footer = () => {
       </div>
         </div>
         <div className="text-white mb-8 md:mb-0 md:mr-8">
-          <h2 className="text-xl font-bold mb-4">Our Solutions</h2>
+          <h2 className="text-xl font-bold mb-4 text-white">Our Solutions</h2>
           <ul className="space-y-2">
             <li>
               <Link to="" className="hover:underline">
@@ -48,7 +48,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="text-white mb-8 md:mb-0 md:mr-8">
-          <h2 className="text-xl font-bold mb-4">Approach</h2>
+          <h2 className="text-xl font-bold mb-4 text-white">Approach</h2>
           <ul className="space-y-2">
             <li>
               <Link to="" className="hover:underline">
@@ -63,7 +63,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="text-white mb-8 md:mb-0">
-          <h2 className="text-xl font-bold mb-4">Policies</h2>
+          <h2 className="text-xl font-bold mb-4 text-white">Policies</h2>
           <ul className="space-y-2">
             <li>
               <Link to="" className="hover:underline">

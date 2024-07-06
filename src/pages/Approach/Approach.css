@@ -1,0 +1,4 @@
+.touch {
+    background-color: #fdf2e9;
+    padding: 1rem; /* Add padding to ensure content doesn't touch the edges */
+  }
