@@ -12,6 +12,7 @@ import Dilli from './dilii.webp';
 import loggy from './logy.webp';
 import woman from './woman.webp';
 import follow from './follow.jpg';
+import walls from './walls.jpg';
 
 export const assets = {
     logo,
@@ -27,5 +28,6 @@ export const assets = {
     Dilli,
     loggy,
     woman,
-    follow
+    follow,
+    walls
 };
