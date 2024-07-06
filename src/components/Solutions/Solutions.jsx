@@ -1,18 +1,25 @@
-import React from 'react';
 import { assets } from '../../assets/assets';
 import Trade from '../Trade/Trade';
 import Ship from '../Ship/Ship';
-import "./Solutions.css";
+import './Solutions.css';
 
 const Solutions = () => {
   return (
-   <>
-     <div className='pree min-h'>
-       <Ship imageSrc={assets.solutions} method="Fulfillment Solutions" learn="Learn More" />
-    </div>
-    <Trade imageSrc={assets.math} method="Trade Services" learn="Learn More" />
-   </>
-  )
-}
+    <>
+      <div className='pree'>
+        <Ship
+          imageSrc={assets.solutions}
+          method='Fulfillment Solutions'
+          learn='Learn More'
+        />
+      </div>
+      <Trade
+        imageSrc={assets.math}
+        method='Trade Services'
+        learn='Learn More'
+      />
+    </>
+  );
+};
 
-export default Solutions
+export default Solutions;

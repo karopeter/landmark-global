@@ -1,4 +1,4 @@
-import React from 'react';
+
 import "./Growth.css";
 
 const Growth = () => {
@@ -9,7 +9,7 @@ const Growth = () => {
         <source src="https://com.landmarkglobal.com/uploads/videos/Untitled-1.webm" type="video/webm" />
         Your browser does not support the video tag.
       </video>
-      <div class="overlayy">
+      <div className="overlayy">
       <h1>
       Find out how we can enable your
          <br />

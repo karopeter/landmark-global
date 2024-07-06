@@ -7,7 +7,7 @@
   
   #bg-videoo {
     position: absolute;
-    top: 50%;
+    top: 73%;
     left: 50%;
     width: 100%;
     height: 100%;
@@ -17,12 +17,12 @@
   
   .overlayy {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%; 
+    width: 60%; 
     max-width: 600px; 
-    height: 40%;
+    height: 30%;
     max-height: 400px; 
     display: flex;
     flex-direction: column;
@@ -30,18 +30,60 @@
     align-items: center;
     color: white;
     text-align: center;
-    background-color:   rgba(255, 255, 255);
-    opacity: 0.8; 
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
   }
   
   .overlayy h1 {
     font-size: 1.5em;
     margin: 0.5em 0;
-    color: #2E5D74;
+    color: #174359;
     font-weight: 800;
   }
   
   .overlayy .btn-ghost {
     background-color: #174359;
     font-size: 18px;
-}
+  }
+  
+  @media screen and (max-width: 768px) {
+    .overlayy {
+      width: 90%;
+      height: auto;
+      padding: 20px;
+    }
+  
+    .overlayy h1 {
+      font-size: 1.2em;
+    }
+  
+    .overlayy .btn-ghost {
+      font-size: 16px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .video-containerr {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+  }
+    #bg-videoo {
+      top: 50%;
+    }
+  
+    .overlayy {
+      top: 50%;
+      width: 95%;
+        height: 50%;
+    }
+  
+    .overlayy h1 {
+      font-size: 1em;
+    }
+  
+    .overlayy .btn-ghost {
+      font-size: 14px;
+    }
+  }
