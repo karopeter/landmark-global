@@ -223,8 +223,8 @@ const TrackingDetails = () => {
                     </div>
                     <div className='timeline-content text-start'>
                       <p className='bold'>{event.status}</p>
-                      <p className='light gray'>{event.location}</p>
-                      <p className='time light gray'>{event.date}</p>
+                      <p className='text-[#6c757d]'>{event.location}</p>
+                      <p className='text-[#6c757d]'>{event.date}</p>
                     </div>
                   </div>
                 ))}
