@@ -100,7 +100,7 @@ const Navbar = () => {
       <div className='right-end'>
         <hr className='navbar-divider' />
       </div>
-      <div className=' flex justify-start items-center p-10'>
+      <div className=' flex justify-start items-center px-4 '>
         {!isMenuOpen && (
           <Link to='/'>
             <img
@@ -119,7 +119,7 @@ const Navbar = () => {
             <li className='menu-item '>
               <Link
                 to=''
-                className='menu text-[20px]'
+                className='menu text-[20px] md:text-base'
                 onClick={toggleSolutions}
               >
                 Solutions{' '}
@@ -129,19 +129,23 @@ const Navbar = () => {
                 />
               </Link>
               {isSolutionsOpen && (
-                <div className='dropdown text-[20px]'>
+                <div className='dropdown text-[15px]'>
                   <Link
                     to='/parcel-delivery'
-                    className='dropdown-item text-[20px]'
+                    className='dropdown-item text-[15px]'
                   >
                     Parcel Delivery
                   </Link>
-                  <Link to='/approach' className='dropdown-item text-[20px]'>
+
+                  <Link to='/tracking' className='dropdown-item text-[15px]'>
+                    Tracking
+                  </Link>
+                  <Link to='/approach' className='dropdown-item text-[15px]'>
                     Fulfillment Solutions
                   </Link>
                   <Link
                     to='/trade-service'
-                    className='dropdown-item text-[20px]'
+                    className='dropdown-item text-[15px]'
                   >
                     Trade Services
                   </Link>
@@ -149,17 +153,17 @@ const Navbar = () => {
               )}
             </li>
             <li>
-              <Link to='/approach' className='menu text-[20px]'>
+              <Link to='/approach' className='menu text-[20px] md:text-base'>
                 Approach
               </Link>
             </li>
             <li>
-              <Link to='' className='menu text-[20px]'>
+              <Link to='' className='menu text-[20px] md:text-base'>
                 About Us
               </Link>
             </li>
             <li>
-                <Link to='' className='menu text-[20px]'>
+              <Link to='' className='menu text-[20px] md:text-base'>
                 News & Insights
               </Link>
             </li>
