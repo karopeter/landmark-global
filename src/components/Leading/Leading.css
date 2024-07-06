@@ -1,3 +1,4 @@
+
 .calls {
   font-size: 128px;  
   font-weight: 900;
@@ -6,18 +7,22 @@
 
 .pree {
     color: #2E5D74;
-    font-size: 30px;
-    font-weight: 700;
-}
-
-.with {
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.btn-ghost {
-    --tw-border-opacity: 1;
-    background-color: #174359;
-    font-size: 18px;
-    color: rgba(255, 255, 255, var(--tw-text-opacity)); 
-}
+  }
+  
+  .pree {
+      color: #2E5D74;
+      font-size: 30px;
+      font-weight: 700;
+  }
+  
+  .with {
+      font-size: 18px;
+      font-weight: 700;
+  }
+  
+  .btn-ghost {
+      --tw-border-opacity: 1;
+      background-color: #174359;
+      font-size: 18px;
+      color: rgba(255, 255, 255, var(--tw-text-opacity)); 
+  }

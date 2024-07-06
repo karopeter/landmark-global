@@ -126,10 +126,10 @@ const Navbar = () => {
                   <Link to='/parcel-delivery' className='dropdown-item'>
                     Parcel Delivery
                   </Link>
-                  <Link to='' className='dropdown-item'>
+                  <Link to='/approach' className='dropdown-item'>
                     Fulfillment Solutions
                   </Link>
-                  <Link to='' className='dropdown-item'>
+                  <Link to='/trade-service' className='dropdown-item'>
                     Trade Services
                   </Link>
                 </div>

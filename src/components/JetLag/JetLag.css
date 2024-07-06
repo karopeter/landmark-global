@@ -1,27 +1,27 @@
 h2 {
-  color: #2d4559;
-}
-
-.pal {
     color: #2d4559;
-    font-size: 21px;
-    font-weight: 700;
-}
-
-.lee {
-    color: #2d4559;
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.exp {
-    color: #2d4559;
-    font-size: 19px; 
-    font-weight: 600;
-}
-
-.back {
-    background: #fdf2e9;
-    width: 80vw;
-    padding: 5rem;
-}
+  }
+  
+  .pal {
+      color: #2d4559;
+      font-size: 21px;
+      font-weight: 700;
+  }
+  
+  .lee {
+      color: #2d4559;
+      font-size: 20px;
+      font-weight: 700;
+  }
+  
+  .exp {
+      color: #2d4559;
+      font-size: 19px; 
+      font-weight: 600;
+  }
+  
+  .back {
+      background: #fdf2e9;
+      width: 80vw;
+      padding: 5rem;
+  }

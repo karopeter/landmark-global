@@ -1,4 +1,3 @@
-
 import '../Leading/Leading.css';
 
 const Ship = ({ imageSrc, method, learn }) => {

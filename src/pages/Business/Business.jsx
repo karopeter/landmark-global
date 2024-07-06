@@ -15,6 +15,12 @@ const Business = () => {
           consumer="Business to Consumer Clearances"
           product="Product and Labeling Consulting"
           duty="Duty and Tax Optimization"
+          clearance="Business to Business Clearances"
+          tax="Trade and Tax Consulting"
+          health="Health Canada Licensed Facilities"
+          compass="Landed Cost Calculator - Compass"
+          refund="Duty and Tax Refunds"
+          software="eManifest Software"
           imageSrc={assets.walls}
         />
       </div>

@@ -19,6 +19,7 @@ function App() {
         <Route path='/tracking/:trackingNumber' element={<TrackingDetails />} />
         <Route path='/parcel-delivery' element={<Parcel />} />
         <Route path='/approach' element={<Approach />} />
+        <Route path='/trade-service' element={<Business />} />
       </Routes>
 
   
