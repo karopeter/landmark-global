@@ -11,6 +11,7 @@ import jetlag from './jetlag.png';
 import Dilli from './dilii.webp';
 import loggy from './logy.webp';
 import woman from './woman.webp';
+import follow from './follow.jpg';
 
 export const assets = {
     logo,
@@ -25,5 +26,6 @@ export const assets = {
     jetlag,
     Dilli,
     loggy,
-    woman
+    woman,
+    follow
 };
