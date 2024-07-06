@@ -1,8 +1,9 @@
-function MobileTimeLine({ data }) {
+import PropTypes from 'prop-types';
+function MobileTimeLine(props) {
   return (
     <div className='w-10/12 md:w-7/12 lg:6/12 mx-auto relative py-20 '>
       <div className=' mt-10 border-l-[#2d4559] border-l-[12px]'>
-        {data.map((item, index) => (
+        {props.data?.map((item, index) => (
           <div
             key={index}
             className=' transform transition cursor-pointer hover:-translate-y-2 ml-10 relative flex items-center px-3 shadow-lg rounded text-[#2b353d] bg-white mb-10 flex-col md:flex-row space-y-4 md:space-y-0'
@@ -42,5 +43,14 @@ function MobileTimeLine({ data }) {
     </div>
   );
 }
-
+MobileTimeLine.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      status: PropTypes.string.isRequired,
+      location: PropTypes.string.isRequired,
+      date: PropTypes.string.isRequired,
+      link: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
 export default MobileTimeLine;
