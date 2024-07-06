@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { assets } from '../../assets/assets';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,6 +7,7 @@ import {
   faTimes,
 } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
+import { useState } from 'react';
 
 const Navbar = () => {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -96,7 +96,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      
+
       <div className='right-end'>
         <hr className='navbar-divider' />
       </div>
