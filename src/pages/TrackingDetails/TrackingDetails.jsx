@@ -89,14 +89,14 @@ const TrackingDetails = () => {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://trackcdn.landmarkglobal.com/resources/images/bg.svg?v=1720101015)`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    minHeight: '100vh',
+    // minHeight: '100vh',
     padding: '0px',
   };
 
   return (
     <>
       <div style={styles}>
-        <div className='flex justify-between items-center p-4'>
+        <div className='flex md:justify-between md:items-center p-4'>
           <div className='flex items-center'>
             <Link to='/'>
               <img src={assets.mecuryLogo} alt='Logo' className='h-10 mr-4' />
@@ -108,39 +108,48 @@ const TrackingDetails = () => {
             </Link>
           </div>
         </div>
-        <div>
-          <h2 className='ml-4 md:ml-20 mt-10 link'>40959R · LTN45454544</h2>
+        <div className=' pl-4 md:pl-44  mb-2 flex justify-start mx-auto'>
+          <h2 className=' link'>40959R · LTN45454544{trackingNumber}</h2>
         </div>
-        <div
-          className='ml-4 md:ml-20 bg-white p-4'
-          style={{ maxWidth: '90vw', md: { maxWidth: '80vw' } }}
-        >
-          <div className='flex flex-col md:flex-row justify-between'>
-            <div className='p-4 m-2 rounded'>
+        <div className='bg-white p-[24px] md:p-[32px] h-auto md:w-4/5 w-11/12 justify-center mx-auto rounded-md   flex flex-col'>
+          <div className='flex flex-row justify-center items-center md:flex-row  md:justify-between '>
+            <div className='px-4  text-[32px] text-[#2B353D] rounded hidden md:flex'>
               <h2>{trackingDetails.completed}</h2>
             </div>
-            <div className='flex flex-col md:flex-row justify-end'>
-              <div className='p-4 m-2 rounded'>
+            <div className='flex flex-row gap-10 justify-center items-center md:flex-row md:justify-end'>
+              <div className='gap-y-3 flex flex-col'>
                 <h3>DELIVERY PARTNER</h3>
-                <p className='osm'>OSM</p>
+                <p className='osm'>
+                  {' '}
+                  <Link className='text-[#005f85] underline'>Canada Post </Link>
+                </p>
               </div>
-              <div className='p-4 m-2 rounded'>
+              <div className='gap-y-2 flex flex-col '>
                 <h3>SHIPPING TO</h3>
                 <p className='osm'>{trackingDetails.location}</p>
               </div>
             </div>
           </div>
-          <div className='flex justify-start ml-5'>
-            <h3 className='ree'>{trackingDetails.returned}</h3>
+          <div className=' flex flex-col gap-y-2 mb-5'>
+            <div className='md:flex justify-start ml-5 hidden '>
+              <h3 className='text-[22.4px] text-[#6C757D] font-medium '>
+                {' '}
+                Item successfully delivered
+              </h3>
+            </div>
+            <div className='hidden md:flex  justify-start ml-5'>
+              <p className='text-[16px] text-[#6C757D]'>
+                {trackingDetails.york}
+              </p>
+            </div>
+            <div className='hidden md:flex justify-start ml-5'>
+              <p className='text-[16px] text-[#6C757D]'>
+                {trackingDetails.updated}
+              </p>
+            </div>
           </div>
-          <div className='flex justify-start ml-5'>
-            <p className='ree'>{trackingDetails.york}</p>
-          </div>
-          <div className='flex justify-start ml-5'>
-            <p className='ree'>{trackingDetails.updated}</p>
-          </div>
-          <div className='flex flex-col md:flex-row justify-between'>
-            <div className='flex flex-col md:flex-row justify-start'>
+          <div className=' md:flex flex-col md:flex-row justify-between'>
+            {/* <div className='flex flex-col md:flex-row justify-start'>
               <div className='p-4 m-2 rounded'>
                 <strong>Date Received</strong>
                 <p className='ree'>{trackingDetails.estimatedDelivery}</p>
@@ -150,15 +159,23 @@ const TrackingDetails = () => {
                 <p className='ree'>{trackingDetails.shippedLocation}</p>
                 <p className='ree'>{trackingDetails.shippedDate}</p>
               </div>
-            </div>
-            <div className='flex justify-start'>
-              <div className='p-4 m-2 rounded'>
-                <strong>Completed -</strong>{' '}
-                <span className='ree'>Received at return</span>
-                <p className='ree'>{trackingDetails.facility}</p>
-                <p className='ree'>{trackingDetails.shippedLocation}</p>
-                <p className='ree'>{trackingDetails.shippedDate}</p>
-              </div>
+            </div> */}
+
+            <div className='flex flex-col md:hidden gap-y-2 justify-start mt-6  '>
+              <p className='text-[32px] font-medium text-[#2B353D]'>
+                Completed{' '}
+              </p>
+              <span className=' text-[22px] text-[#6C757D] font-medium'>
+                Item successfully delivered
+              </span>
+
+              <p className='text-[#6C757D] text-[16px]'>
+                {trackingDetails.shippedLocation}
+              </p>
+              <p className='text-[#6C757D] text-[16px]'>
+                {' '}
+                Updated,{trackingDetails.shippedDate}
+              </p>
             </div>
           </div>
           {isMobile ? (
@@ -212,7 +229,7 @@ const TrackingDetails = () => {
                   </div>
                 ))}
                 <div
-                  className='horizontal-line dark absolute top-4 left-0 h-3 bg-[#2d4559] z-0 lg:w-1/2'
+                  className='horizontal-line  dark absolute top-4 left-4 h-3 bg-[#2d4559] z-0 lg:w-[58%]'
                   ref={lineRef}
                 ></div>
               </div>
@@ -292,29 +309,74 @@ const TrackingDetails = () => {
             </div>
           )}
         </div>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 px-4 md:px-20'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 px-4 md:px-20 mx-auto justify-center lg:w-[90%] w-full'>
           <div className='bg-white p-4 md:p-10 rounded-lg shadow-md'>
-            <h3 className='mb-4'>Shipment Details</h3>
-            <p className='mb-4 ree'>ORDER REFERENCE</p>
-            <p className='mb-4 ree'>40959R</p>
+            <h3 className='mb-4 text-[24px] leading-[37px] text-[#2b353d]'>
+              Shipment Details
+            </h3>
+            <p className='mb-4  text-[16px] leading-[25px] text-[#6c757d]'>
+              ORDER REFERENCE
+            </p>
+            <p className='mb-4 text-[16px] leading-[25px] text-[#2b353d] uppercase'>
+              40959R0803769852
+            </p>
             <div className='mt-4'>
-              <p className='mb-4 ree'>PACKAGE REFERENCE</p>
-              <p className='ree'>N/A</p>
+              <p className='mb-4   text-[16px] leading-[25px] text-[#6c757d] '>
+                PACKAGE REFERENCE
+              </p>
+              <p className='text-[16px] leading-[25px] text-[#2b353d]'>N/A</p>
+            </div>
+          </div>
+          <div className='bg-white p-4 md:p-10 rounded-lg shadow-md'>
+            <h3 className='mb-4 text-[24px] leading-[37px] text-[#2b353d]'>
+              Delivery Details
+            </h3>
+            <p className='mb-4 text-[16px] leading-[25px] text-[#6c757d]'>
+              DELIVERY PARTNER
+            </p>
+            <p className='mb-4 text-[16px] leading-[25px] text-[#2b353d] uppercase '>
+              {' '}
+              canada post
+              <span className=' underline underline-[#2b353d]'>
+                {' '}
+                61210001422700810803769852
+              </span>
+            </p>
+            <div className='mt-4'>
+              <p className='mb-4  text-[16px] leading-[25px] text-[#6c757d] '>
+                LANDMARK TRACKING NUMBER
+              </p>
+              <p className='text-[16px] leading-[25px] text-[#2b353d] '>
+                LTN45454544
+              </p>
             </div>
           </div>
           <div
-            className='bg-white p-4 md:p-10 rounded-lg shadow-md'
-            style={{ maxWidth: '100%' }}
+            className='paragraph-truncate-5 cursor-pointer user-select-none text-truncate bg-white p-4 md:p-10 rounded-lg shadow-md  col-span-1 md:col-span-2 '
+            id='clearance-statement-66891fd8be132'
+            onClick='toggleTruncate(["clearance-statement-66891fd8be132", "clearance-statement-66891fd8be133"], true)'
           >
-            <h3 className='mb-4'>Delivery Details</h3>
-            <p className='mb-4 ree'>DELIVERY PARTNER</p>
-            <p className='mb-4 ree'>OSM 1002258361210001422700810803769852</p>
-            <div className='mt-4'>
-              <p className='mb-4 ree'>LANDMARK TRACKING NUMBER</p>
-              <p className='ree'>LTN45454544</p>
-            </div>
+            <h1 className='mb-4 text-[24px] leading-[37px] text-[#2b353d]'>
+              Clearance Statement
+            </h1>
+            By ordering goods from Hautelook.com, I hereby authorize Landmark
+            Trade Services Ltd., a licensed Canadian Customs Broker, to act as m
+            agent, and to transact business with the CBSA, to obtain release of
+            my merchandise, account for duties and taxes, and prepare and submit
+            refund claims on my behalf for any orders that were misdeclared to
+            CBSA.
+            <br />I understand that the CBSA will send any refund of duties and
+            taxes that were paid on misdeclared orders to Landmark Trade
+            Services Ltd., and that I will obtain any refunds associated with
+            misdeclared orders directly from Hautelook.com. Further, I also
+            authorize Landmark Trade Services Ltd. to forward any refund issued
+            by the CBSA in my name to Hautelook.com so they can be reimbursed. I
+            also waive my need for any receipt of this transaction which may
+            include classification of goods, transaction number, and a breakdown
+            of duties and taxes.
           </div>
         </div>
+
         <FooterTracking />
       </div>
     </>
