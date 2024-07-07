@@ -7,9 +7,17 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import FooterTracking from '../../components/FooterTracking/FooterTracking';
 import './Tracking.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { db } from '../../App';
+import { collection, getDocs } from 'firebase/firestore';
+import { TextInput, Progress } from 'flowbite-react';
 
 const Tracking = () => {
+  const [trackingDetails, setTrackingDetails] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [showError, setShowError] = useState(false);
+
   const navigate = useNavigate();
 
   const styles = {
@@ -17,16 +25,52 @@ const Tracking = () => {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   };
-
   const [trackingNumber, setTrackingNumber] = useState('');
+  console.log(trackingNumber);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setIsLoading(true);
+      try {
+        const shippingLogCollection = collection(db, 'shipping_log');
+        const shippingLogSnapshot = await getDocs(shippingLogCollection);
+        const shippingLogList = shippingLogSnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+
+        const foundTracking = shippingLogList.find(
+          (log) => log.tracking_id === trackingNumber
+        );
+        if (foundTracking) {
+          setTrackingDetails(foundTracking);
+        } else {
+          setError('Tracking information not found');
+        }
+      } catch (error) {
+        setError(error.message || 'Error fetching tracking details');
+        console.error('Error fetching shipping logs: ', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [trackingNumber]);
 
   const handleInputChange = (e) => {
     setTrackingNumber(e.target.value);
   };
 
   const handleSubmit = (e) => {
-    navigate(`/tracking/${trackingNumber}`);
     e.preventDefault();
+    setShowError(true);
+    if (trackingDetails) {
+      navigate(`/tracking/${trackingNumber}`);
+    } else {
+      setError('Tracking information not found');
+    }
+
     // Redirect to tracking details page with the tracking number
   };
 
@@ -57,28 +101,33 @@ const Tracking = () => {
               Tracking your Shipment
             </h2>
             <form
-              className='flex flex-col items-center gap-9 md:flex-row   '
+              className='flex flex-col justify-center items-center gap-9 md:flex-row   '
               onSubmit={handleSubmit}
             >
-              <div className='w-full relativex'>
-                <input
-                  type='text'
+              <div className='w-full relative'>
+                <TextInput
                   placeholder='Search for tracking'
-                  className='p-3 border border-gray-300 rounded outline-none w-full '
                   value={trackingNumber}
                   onChange={handleInputChange}
+                  id='md'
+                  type='text'
+                  sizing='lg'
                 />
+                {showError && error && (
+                  <p className='text-red-500 absolute mb-11'>{error}</p>
+                )}
               </div>
-              <div className='md:w-2/5 w-full'>
+              <div className='md:w-2/5 w-full flex items-center gap-4'>
                 <button
                   type='submit'
                   className='p-3 bg-red-500 text-white rounded hover:bg-red-700 w-full text-2xl '
                 >
                   See Tracking Status
                 </button>
+                {isLoading && <Progress size='sm' />}
               </div>
             </form>
-            <p className='mt-2 text-gray-700 text-lg'>
+            <p className='mt-6 text-gray-700 text-lg'>
               Enter up to 25 tracking numbers separated by commas
             </p>
           </div>
