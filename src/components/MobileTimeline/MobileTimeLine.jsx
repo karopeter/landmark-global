@@ -1,7 +1,7 @@
 function MobileTimeLine({ data }) {
   return (
-    <div className='w-10/12 md:w-7/12 lg:6/12 mx-auto relative py-20 '>
-      <div className=' mt-10 border-l-[#2d4559] border-l-[12px]'>
+    <div className='w-10/12 md:w-7/12 lg:6/12 mx-auto relative py-20'>
+      <div className='mt-10 border-l-[#2d4559] border-l-[12px]'>
         {data.map((item, index) => (
           <div
             key={index}
