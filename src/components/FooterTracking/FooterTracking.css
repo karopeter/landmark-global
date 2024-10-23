@@ -1,5 +1,6 @@
 .mert {
-    color: #dae7f0;
+    /* color: #dae7f0; */
+    color: #333;
     font-size: 16px;
 }
 
@@ -8,5 +9,5 @@
 }
 
 .land {
-    color: #dae7f0;  
+    color: #333;
 }
